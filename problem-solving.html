@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Problem Solving Example</title>
+</head>
+<body>
+<script>
+
+    //1. Understand the Problem
+
+    //The interviewer will paste a question on the screen, they'll read it to you, go over inputs and out puts
+    //restate problem in your own words
+    //identify inputs and outputs
+
+    //EX: Write a function which takes in a string and returns counts of each character in the string.
+
+
+    /*
+        1. restate: take the string, count the characters, return the count
+        2. inputs: string, could be a sentence, alphanumeric characters (str)
+        3. outputs: object with char as key and count as value, (charCount)
+
+    */
+
+
+
+    //2. Explore Concrete Examples
+
+     // simple example:   countChars("aaaa") => {a : 4}
+    //  complex example:  countChars("hello hey!") => {}
+
+    //EX: Write a function which takes in a string and returns counts of each alphanumeric character in the string.
+
+    //
+    /*
+
+    //3. Break it Down
+
+    //EX: Write a function which takes in a string and returns counts of each alphanumeric character in the string.
+        start with the output
+
+
+    /*
+
+	*/
+
+   // function countChars(str){
+        // make bucket obj
+        // loop through string to get chars
+        // check if char is alphanumeric
+        //lowercase each char
+        // if it is, add to obj
+        // return obj
+    //}
+    //4. Solve || Simplify
+
+    function countChars(str){
+    let charCount = {};
+    //for of loop
+    for(let char of str){
+        char = char.toLowerCase();
+
+        //add char to new object
+        if(!charCount[char]){
+            charCount[char] = 1;
+
+        }else{
+            charCount[char] ++;
+
+        }
+
+    }
+
+    //return obj
+   return charCount;
+    }
+
+    console.log(countChars("hello from Texas!"));
+
+
+    //EX: Write a function which takes in a string and returns counts of each alphanumeric character in the string.
+
+    //5. Look Back and Refactor
+    //if they ask if i can refactor
+    // at the moment i can't think of a proper way to refactor however...
+
+    //EX: Write a function which takes in a string and returns counts of each alphanumeric character in the string.
+
+</script>
+</body>
+</html>
